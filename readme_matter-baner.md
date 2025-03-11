@@ -1,6 +1,6 @@
 # matter-banner
 
-MatterLink es un web component que genera un enlace personalizable que puede incluir texto y un icono. Forma parte del catálogo corporativo de Web Components de la Junta de Andalucía.
+MatterLink es un web component que genera un Banner. Forma parte del catálogo corporativo de Web Components de la Junta de Andalucía.
 
 ## Instalación  y servidor de desarrollo
 
@@ -40,42 +40,34 @@ Para hacer uso de este web-component se deberá realizar dos sencillos pasos:
     ```
 2. Una vez importado, llamar a dicho web-component a partir de su etiqueta propia individual. Esta llamada se debe realizar desde el fichero .html donde se quiera mostrar el web-component:
     ```html 
-    <matter-banner textContent="Enlace" linkUrl="https://www.example.com"></matter-banner>
+   <matter-banner stylesheetVersion="latest" urlLink="https://ejemplo.com" imageBanner="https://placehold.co/1140x330?text=Banner" imageAltBanner="Descripción alternativa de la imagen" headingBanner="Título del Banner" descriptionBanner="Subtítulo o descripción del banner"></matter-banner>
     ```
 
-## Ejemplo de uso
-### Enlace básico
+
+## Estructura completa
 
 ```html
-<matter-banner textContent="Ir a Google" linkUrl="https://google.com"></matter-banner>
-```
-
-### Enlace con icono
-
-```html
-<matter-banner textContent="Calendario" linkUrl="#" iconClass="fa-solid fa-calendar-alt"></matter-banner>
-```
-
-### Enlace con tamaño de texto y color personalizados
-
-```html
-<matter-banner textContent="Enlace Grande" linkUrl="#" textSize="h1" textColor="gray"></matter-banner>
+<matter-banner 
+  stylesheetVersion="" 
+  urlLink="" 
+  imageBanner="" 
+  imageAltBanner="" 
+  headingBanner="" 
+  descriptionBanner="S">
+</matter-banner>
 ```
 
 ## Props
 
-| Prop         |  Tipo   | Descripción                                                                                               |
-| :----------- | :-----: | :-------------------------------------------------------------------------------------------------------- |
-| textContent  | string  | El texto que se muestra en el enlace.                                                                     |
-| linkUrl      | string  | La URL a la que apunta el enlace.                                                                         |
-| textColor    | string  | El color del texto (green, gray, white). Por defecto no aplica color.                                     |
-| textSize     | string  | Tamaño del texto (h1, h2, etc.). Por defecto mantiene el tamaño base.                                     |
-| linkTarget   | string  | El destino del enlace (_self, _blank).                                                                    |
-| iconClass    | string  | Clase del icono de FontAwesome (v6). Se añade antes del texto del enlace si está definida.                |
-| ariaLabel    | string  | Etiqueta ARIA para mejorar la accesibilidad del enlace.                                                   |
-                                                            
+| Prop             |  Tipo   | Descripción                                                                                                 |
+| :--------------- | :-----: | :--------------------------------------------------------------------------------------------------------   |
+| stylesheetVersion| string  | Versión de la hoja de estilos a usar. Por defecto, `"latest"`.                                              |
+| urlLink          | string  | URL a la que se redirige al hacer clic en el banner.                                                        |
+| imageBanner      | string  | URL de la imagen que se muestra en el banner.                                                               |
+| imageAltBanner   | string  | Texto alternativo para la imagen del banner.                                                                |
+| headingBanner    | string  | Título principal que se muestra en el banner.                                                               |
+| descriptionBanner| string  | Descripción o subtítulo que se muestra en el banner.                                                        |
 
-<br>
 
 ## Edición
 
@@ -98,6 +90,56 @@ npm run lint
 ## Formato
 
 [Prettier](https://prettier.io/) se utiliza para formatear el código. Ha sido preconfigurado según el estilo del Proyecto Polymer. Puede cambiar esto en `.prettierrc.json`.
+
+## StoryBook
+
+Para añadir una historia al storybook es necesario realizar los siguientes cambios en el Webcomponent:
+
+1. En el fichero ```package.json```  añadir el campo ```"type": "atomos|moleculas|organismos",``` 
+
+2. En el fichero ```package.json``` también es necesario añadir el plugin     copy-webpack-plugin 
+
+```
+{
+  "name": "@matter/matter-banner",
+  "type": "moleculas",
+  "version": "1.2.0",
+  "description": "A web component of MSD JdA Catalog",
+  "author": "Junta de Andalucía",
+  "license": "EUPL-1.2",
+  "main": "src/matter-banner",
+...
+...
+ "devDependencies": {
+    "@babel/core": "^7.14.3",
+    ... 
+    "copy-webpack-plugin": "^12.0.2",
+    ...
+  }
+}
+```
+3. En el fichero config/webpack.prod.js añadimos la información necesaria para generar los ficheros que se cargarán en el storybook
+
+```
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+...
+const package = require('../package.json');
+const PackageType = package.type;
+const PackageName = package.name.replace('@matter/', '');
+...
+
+  plugins: [
+    ....,
+    new CopyPlugin({
+      patterns: [
+        { from: "README.md", to: 'story' + '/' + PackageType + '/' + PackageName },
+        { from: "./demo/matter-button.stories.js", to: 'story' + '/' + PackageType + '/' + PackageName },
+      ],
+    }),  ],
+
+```
+
+4. En la carpeta demo añadimos el fichero *.stories.js que montará la historia en el storybook del webcomponent.
 
 ## Producción
 
