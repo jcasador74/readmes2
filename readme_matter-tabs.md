@@ -61,9 +61,10 @@ Para hacer uso de este web-component se deberá realizar dos sencillos pasos:
   <matter-tabs 
     stylesheetVersion='latest'
     tabs='[
-    {"label": "", "content": "",  "disabled": false},
-    ...
-  ]'
+        {"label": "", "content": "",  "disabled": false},
+        ...
+        ]'
+    tabsUrl="https://..."
     currentTab='0'>
   </matter-tabs>
 ```
