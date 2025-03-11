@@ -133,7 +133,7 @@ const PackageName = package.name.replace('@matter/', '');
     new CopyPlugin({
       patterns: [
         { from: "README.md", to: 'story' + '/' + PackageType + '/' + PackageName },
-        { from: "./demo/matter-button.stories.js", to: 'story' + '/' + PackageType + '/' + PackageName },
+        { from: "./demo/matter-banner.stories.js", to: 'story' + '/' + PackageType + '/' + PackageName },
       ],
     }),  ],
 
