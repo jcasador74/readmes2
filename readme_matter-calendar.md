@@ -2,8 +2,6 @@
 
 Matter-calendar genera un calendario que permite visualizar el contenido de un mes,segregado por días. Su principal función es destacar por medio del atributo color y por orden cronológico aspectos relevantes. El calendario permite el acceso directo a páginas de destino, donde el usuario puede ampliar información sobre evento/actividad a desarrollar. Forma parte del catálogo corporativo de Web Components de la Junta de Andalucía.
 
-![Matter](https://i.postimg.cc/Yq1NmQGm/imagen-README.png)
-
 ## Instalación  y servidor de desarrollo
 
 Para levantar el web components en local, se deberá seguir una serie de pasos en el orden correcto, ya que sino no se podrá iniciar correctamente. Los pasos que se deben seguir son los siguientes:
