@@ -41,7 +41,8 @@ Para hacer uso de este web-component se deberá realizar dos sencillos pasos:
     ```
 2. Una vez importado, llamar a dicho web-component a partir de su etiqueta propia individual. Esta llamada se debe realizar desde el fichero .html donde se quiera mostrar el web-component:
     ```html 
-    <matter-social stylesheetVersion="latest"
+    <matter-social
+    stylesheetVersion="latest"
     networks='[
       {"url": "https://www.youtube.com/@GobAndalucia", "name": "youtube", "icon": "fab fa-youtube"},
       {"url": "https://www.twitter.com/andaluciajunta", "name": "twitter", "icon": "fab fa-x-twitter"},
@@ -56,7 +57,8 @@ Para hacer uso de este web-component se deberá realizar dos sencillos pasos:
 ## Estructura completa
 
 ```html
-<matter-social stylesheetVersion="latest"
+<matter-social
+    stylesheetVersion="latest"
     networks='[
       {"url": "", "name": "", "icon": ""},
       ...
