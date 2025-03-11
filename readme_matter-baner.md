@@ -53,7 +53,7 @@ Para hacer uso de este web-component se deberá realizar dos sencillos pasos:
   imageBanner="" 
   imageAltBanner="" 
   headingBanner="" 
-  descriptionBanner="S">
+  descriptionBanner="">
 </matter-banner>
 ```
 
