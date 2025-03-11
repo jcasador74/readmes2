@@ -41,46 +41,43 @@ Para hacer uso de este web-component se deberá realizar dos sencillos pasos:
     ```
 2. Una vez importado, llamar a dicho web-component a partir de su etiqueta propia individual. Esta llamada se debe realizar desde el fichero .html donde se quiera mostrar el web-component:
     ```html 
-        <matter-card
-    stylesheetVersion='latest'
-    typeCard="vertical"
-    imageMainCard="https://placehold.co/800x450?text=16:9"
-    imageMainAltCard="Placeholder image"
-    imageIconCard="https://placehold.co/40x40?text=1:1"
-    imageIconAltCard="Placeholder image"
-    category="Technology"
-    title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat tincidunt nisl, a maximus justo. Cras ut urna in neque maximus ultricies eget sit amet lacus.s"
-    urlLink="https://example.com"
-    date="2024-12-13"
-    subtitle="Lorem ipsum dolor sit ame"
-    description="Web Components are becoming increasingly popular for building reusable UI components."
-    links='[
-      {"linkUrl": "https://juntadeandalucia.es", "textContent": "Pasen"},
-      {"linkUrl": "https://juntadeandalucia.es", "textContent": "Calendario escolar"},
-      {"linkUrl": "https://juntadeandalucia.es", "textContent": "Acceso a la universidad y másteres"}
-    ]'
-    metadatas='[
-        { "term": "Organismo", "description": "Turismo, Cultura y Deporte"},
-        { "term": "Tipo", "description": "Estadística. Incluida en el Plan Estadístico..." }
-      ]'
-    social='[
-      {"url": "https://facebook.com", "name": "facebook", "icon": "fab fa-facebook"},
-      {"url": "https://twitter.com", "name": "twitter", "icon": "fab fab fa-x-twitter"},
-      {"url": "https://linkedin.com", "name": "linkedin", "icon": "fab fa-linkedin"},
-      {"url": "https://linkedin.com", "name": "linkedin", "icon": "fab fa-linkedin"},
-      {"url": "https://linkedin.com", "name": "linkedin", "icon": "fab fa-linkedin"}
-    ]'>
-  
-
-    
-  </matter-card>
+    <matter-card
+        stylesheetVersion='latest'
+        typeCard="vertical"
+        imageMainCard="https://placehold.co/800x450?text=16:9"
+        imageMainAltCard="Placeholder image"
+        imageIconCard="https://placehold.co/40x40?text=1:1"
+        imageIconAltCard="Placeholder image"
+        category="Technology"
+        title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat tincidunt nisl, a maximus justo. Cras ut urna in neque maximus ultricies eget sit amet lacus.s"
+        urlLink="https://example.com"
+        date="2024-12-13"
+        subtitle="Lorem ipsum dolor sit ame"
+        description="Web Components are becoming increasingly popular for building reusable UI components."
+        links='[
+          {"linkUrl": "https://juntadeandalucia.es", "textContent": "Pasen"},
+          {"linkUrl": "https://juntadeandalucia.es", "textContent": "Calendario escolar"},
+          {"linkUrl": "https://juntadeandalucia.es", "textContent": "Acceso a la universidad y másteres"}
+        ]'
+        metadatas='[
+            { "term": "Organismo", "description": "Turismo, Cultura y Deporte"},
+            { "term": "Tipo", "description": "Estadística. Incluida en el Plan Estadístico..." }
+          ]'
+        social='[
+          {"url": "https://facebook.com", "name": "facebook", "icon": "fab fa-facebook"},
+          {"url": "https://twitter.com", "name": "twitter", "icon": "fab fab fa-x-twitter"},
+          {"url": "https://linkedin.com", "name": "linkedin", "icon": "fab fa-linkedin"},
+          {"url": "https://linkedin.com", "name": "linkedin", "icon": "fab fa-linkedin"},
+          {"url": "https://linkedin.com", "name": "linkedin", "icon": "fab fa-linkedin"}
+        ]'>    
+    </matter-card>
     ```
 
 
 ## Estructura completa
 
 ```html
-    <matter-card
+<matter-card
     stylesheetVersion='latest'
     typeCard="vertical"
     imageMainCard=""
@@ -92,7 +89,7 @@ Para hacer uso de este web-component se deberá realizar dos sencillos pasos:
     urlLink="
     date=""
     subtitle=""
-    description="Web Components are becoming increasingly popular for building reusable UI components."
+    description=""
     links='[
       {"linkUrl": "", "textContent": ""},
       ...
@@ -104,27 +101,29 @@ Para hacer uso de este web-component se deberá realizar dos sencillos pasos:
     social='[
       {"url": "", "name": "", "icon": ""},
       ...
-    ]'>
-  
-
-    
-  </matter-card>
+    ]'>   
+</matter-card>
 ```
 
 ## Props
 
-| Prop       |  Tipo   | Descripción                                                                                                 |
-| :--------- | :-----: | :--------------------------------------------------------------------------------------------------------   |
-| stylesheetVersion  | string   | Versión de la hoja de estilos a usar. Por defecto, `"latest"`.         |
-| labelText  | string  | Texto del botón.                                                                                            |
-| tagType    | string  | Tipo de etiqueta que queremos mostrar, las opciones son: link, button, input.                               |
-| inputType  | string  | Tipo de input que queremos mostrar, las opciones son: button, submit y reset.                               |
-| buttonType | string  | Estilo que queremos dar la botón, las opciones son: primary, secondary.                                     |
-| iconClass  | string  | Estilo del icono. Esto viene definido por los estilos de FontAwesome                                        |
-| isIconOnly | boolean | Indica si el botón está compuesto por un solo icono.                                                        |
-| linkUrl    | string  | Especifica dónde abrir el enlace vinculado, por defecto '\_self'.                                           |
-| linkTarget | string  | Indica si el componente está deshabilitado, por defecto habilitado.                                         |
-| isDisabled | boolean | Indica si el botón está desabilitado. Por defecto false.                                                    |
+| Propiedad            | Tipo     | Descripción                                                                                                 |
+| :------------------- | :------: | :-------------------------------------------------------------------------------------------------------- |
+| `stylesheetVersion`  | `String` | Establece la versión de la hoja de estilos a utilizar. Por defecto es `"latest"`.                          |
+| `typeCard`           | `String` | Define el tipo de la tarjeta. Puede ser `"vertical"` o `"horizontal"`.                                      |
+| `imageMainCard`      | `String` | URL de la imagen principal de la tarjeta. Si no se proporciona, se dejará vacío.                           |
+| `imageMainAltCard`  | `String` | Texto alternativo de la imagen principal, útil para accesibilidad y SEO.                                    |
+| `imageIconCard`      | `String` | URL de la imagen del ícono de la tarjeta. Si no se proporciona, se dejará vacío.                           |
+| `imageIconAltCard`  | `String` | Texto alternativo de la imagen del ícono, útil para accesibilidad y SEO.                                    |
+| `title`              | `String` | Título que se mostrará en la tarjeta.                                                                       |
+| `urlLink`            | `String` | URL a la que se enlaza la tarjeta. Por defecto es `"#"`, lo que indica que no tiene enlace.                 |
+| `subtitle`           | `String` | Subtítulo que se mostrará debajo del título en la tarjeta.                                                  |
+| `description`        | `String` | Descripción que proporciona detalles adicionales sobre el contenido de la tarjeta.                          |
+| `category`           | `String` | Categoría que clasifica la tarjeta, por ejemplo, `"Tecnología"`.                                            |
+| `date`               | `String` | Fecha asociada a la tarjeta, como la fecha de publicación o el evento relacionado.                          |
+| `metadatas`          | `Array`  | Array de objetos con términos y descripciones, usados para proporcionar metadatos adicionales.              |
+| `links`              | `Array`  | Array de objetos con enlaces. Cada objeto tiene las propiedades `linkUrl` (URL del enlace) y `textContent` (texto del enlace). |
+| `social`             | `Array`  | Array de objetos con redes sociales. Cada objeto contiene `url`, `name` (nombre de la red social) e `icon` (icono de la red social). |
 
 
 
