@@ -119,13 +119,13 @@ Para hacer uso de este web-component se deberá realizar dos sencillos pasos:
     button='[
         { 
             "stylesheetVersion": "",
-            "labelText": "Botón",
-            "tagType": "link",
-            "inputType": "button",
-            "buttonType": "primary",
-            "iconClass": "fa-solid fa-star",
+            "labelText": "",
+            "tagType": "",
+            "inputType": "",
+            "buttonType": "",
+            "iconClass": "",
             "isIconOnly": "",
-            "linkUrl": "http://...",
+            "linkUrl": "",
             "linkTarget": "",
             "isDisabled": ""
         }
