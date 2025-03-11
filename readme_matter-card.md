@@ -63,12 +63,26 @@ Para hacer uso de este web-component se deberá realizar dos sencillos pasos:
             { "term": "Organismo", "description": "Turismo, Cultura y Deporte"},
             { "term": "Tipo", "description": "Estadística. Incluida en el Plan Estadístico..." }
           ]'
-        social='[
+        networks='[
           {"url": "https://facebook.com", "name": "facebook", "icon": "fab fa-facebook"},
           {"url": "https://twitter.com", "name": "twitter", "icon": "fab fab fa-x-twitter"},
           {"url": "https://linkedin.com", "name": "linkedin", "icon": "fab fa-linkedin"},
           {"url": "https://linkedin.com", "name": "linkedin", "icon": "fab fa-linkedin"},
           {"url": "https://linkedin.com", "name": "linkedin", "icon": "fab fa-linkedin"}
+        ]'
+         button='[
+            { 
+                "stylesheetVersion": "",
+                "labelText": "Botón",
+                "tagType": "link",
+                "inputType": "button",
+                "buttonType": "primary",
+                "iconClass": "fa-solid fa-star",
+                "isIconOnly": "",
+                "linkUrl": "http://...",
+                "linkTarget": "",
+                "isDisabled": ""
+            }
         ]'>    
     </matter-card>
     ```
@@ -98,10 +112,24 @@ Para hacer uso de este web-component se deberá realizar dos sencillos pasos:
         { "term": "", "description": ""},
          ...
       ]'
-    social='[
+    networks='[
       {"url": "", "name": "", "icon": ""},
       ...
-    ]'>   
+    ]'
+    button='[
+        { 
+            "stylesheetVersion": "",
+            "labelText": "Botón",
+            "tagType": "link",
+            "inputType": "button",
+            "buttonType": "primary",
+            "iconClass": "fa-solid fa-star",
+            "isIconOnly": "",
+            "linkUrl": "http://...",
+            "linkTarget": "",
+            "isDisabled": ""
+        }
+        ]'>   
 </matter-card>
 ```
 
@@ -123,7 +151,8 @@ Para hacer uso de este web-component se deberá realizar dos sencillos pasos:
 | `date`               | `String` | Fecha asociada a la tarjeta, como la fecha de publicación o el evento relacionado.                          |
 | `metadatas`          | `Array`  | Array de objetos con términos y descripciones, usados para proporcionar metadatos adicionales.              |
 | `links`              | `Array`  | Array de objetos con enlaces. Cada objeto tiene las propiedades `linkUrl` (URL del enlace) y `textContent` (texto del enlace). |
-| `social`             | `Array`  | Array de objetos con redes sociales. Cada objeto contiene `url`, `name` (nombre de la red social) e `icon` (icono de la red social). |
+| `networks`             | `Array`  | Array de objetos con redes sociales. Cada objeto contiene `url`, `name` (nombre de la red social) e `icon` (icono de la red social). |
+| `button`             | `Array`  | Array para definir los valores del botón                                                                     |
 
 
 
