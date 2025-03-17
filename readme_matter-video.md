@@ -40,28 +40,15 @@ Para hacer uso de este web-component se deberá realizar dos sencillos pasos:
     ```
 2. Una vez importado, llamar a dicho web-component a partir de su etiqueta propia individual. Esta llamada se debe realizar desde el fichero .html donde se quiera mostrar el web-component:
     ```html 
-    <matter-video 
-sourceVideo="https://storagecdnvlc.codev8.net/ondemand/52001e31-c4ed-4d7b-8462-734935d179be/e397d7a1-7816-41b6-a71b-26fb1a194b2b_Fast_H1500.mp4" 
-sourcePoster="https://www.juntadeandalucia.es/sites/default/files/2024-06/imagen_video_presentacion_ura_ada_900x482.jpg"
-defaultTextVideo="Your browser does not support the video tag." 
-ratioVideo="16x9" 
-stylesheetVersion="latest"
-tracks='[
-{
+    <matter-video sourceVideo="https://storagecdnvlc.codev8.net/ondemand/52001e31-c4ed-4d7b-8462-734935d179be/e397d7a1-7816-41b6-a71b-26fb1a194b2b_Fast_H1500.mp4"  sourcePoster="https://www.juntadeandalucia.es/sites/default/files/2024-06/imagen_video_presentacion_ura_ada_900x482.jpg" defaultTextVideo="Your browser does not support the video tag." ratioVideo="16x9" stylesheetVersion="latest" tracks='[{
     "label": "Español",
     "kind": "subtitles",
     "srclang": "es",
-    "src": "es.vtt"
-},
-{
+    "src": "es.vtt"},{
     "label": "Español",
     "kind": "description",
     "srclang": "es",
-    "src": "description-es.vtt"
-    
-}
-    
-]'></matter-video>
+    "src": "description-es.vtt"}]'></matter-video>
     ```
 
 ## Ejemplo de uso
