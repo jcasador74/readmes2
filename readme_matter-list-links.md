@@ -41,8 +41,41 @@ Para hacer uso de este web-component se deberá realizar dos sencillos pasos:
     ```
 2. Una vez importado, llamar a dicho web-component a partir de su etiqueta propia individual. Esta llamada se debe realizar desde el fichero .html donde se quiera mostrar el web-component:
     ```html 
-    
-    ```
+    <matter-list-links typeList="principal" headerText="Te interesa" stylesheetVersion="latest" descriptionList="Nullam id est non mauris vestibulum mattis. Duis et lectus scelerisque, consectetur nulla et, aliquam quam. Integer porttitor malesuada mi" lists='[
+    {
+        "items": [
+            {   
+                
+                "link": {
+                    "textContent": "Ofertas de empleo - Junta de Andalucía",
+                    "linkUrl": "https://www.juntadeandalucia.es/organismos/sae/areas/ofertas-empleo/ofertas-empleo.html",
+                    "textColor": "",
+                    "textSize": "h5",
+                    "iconClass": "fa-solid fa-star",
+                    "textWeight": ""
+                },
+                "descriptionLink": "Nullam id est non mauris vestibulum mattis. Duis et lectus scelerisque, consectetur nulla et, aliquam quam. Integer porttitor malesuada mi, at eleifend elit auctor quis. Quisque pellentesque sapien ut nunc congue cursus. Praesent dictum dui nec odio congue facilisis. Donec id pretium odio. Vestibulum aliquam tempus quam nec vehicula. Quisque vel dui sit amet ex mattis molestie non id lorem. Ut ultricies metus orci, id facilisis purus pretium ut."
+
+                
+            },
+            {
+
+                "link": {
+                    "textContent": "Ofertas de empleo - Junta de Andalucía",
+                    "linkUrl": "https://www.juntadeandalucia.es/organismos/sae/areas/ofertas-empleo/ofertas-empleo.html",
+                    "textColor": "",
+                    "textSize": "h5",
+                    "iconClass": "fa-solid fa-star",
+                    "textWeight": ""
+                },
+                "descriptionLink": "Nullam id est non mauris vestibulum mattis. Duis et lectus scelerisque, consectetur nulla et, aliquam quam. Integer porttitor malesuada mi, at eleifend elit auctor quis. Quisque pellentesque sapien ut nunc congue cursus. Praesent dictum dui nec odio congue facilisis. Donec id pretium odio. Vestibulum aliquam tempus quam nec vehicula. Quisque vel dui sit amet ex mattis molestie non id lorem. Ut ultricies metus orci, id facilisis purus pretium ut."
+
+            }
+        ]
+    }
+]'
+moreOptionUrl="http://"
+moreOptionTitle="Más detalles de enlace"></matter-list-links>```
 
 
 ## Estructura completa
