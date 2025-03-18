@@ -81,14 +81,42 @@ moreOptionTitle="Más detalles de enlace"></matter-list-links>```
 ## Estructura completa
 
 ```html
+<matter-list-links typeList="" headerText="" stylesheetVersion="" descriptionList="i" lists='[
+    {
+        "items": [
+            {   
+                
+                "link": {
+                    "textContent": "",
+                    "linkUrl": "",
+                    "textColor": "",
+                    "textSize": "",
+                    "iconClass": "",
+                    "textWeight": ""
+                },
+                "descriptionLink": ""
 
+                
+            },
+        ...
+        ]
+    }
+]'
+moreOptionUrl=""
+moreOptionTitle=""></matter-list-links>
 ```
 
 ## Props
 
-| Propiedad            | Tipo     | Descripción                                                                                                 |
-| :------------------- | :------: | :-------------------------------------------------------------------------------------------------------- |
-
+| Propiedad         | Tipo     | Descripción                                                                 |
+|------------------|---------|-----------------------------------------------------------------------------|
+| `stylesheetVersion` | String  | Versión de las hojas de estilo a utilizar.                               |
+| `typeList`       | String  | Tipo de lista (`secundario` o `principal`).                                |
+| `headerText`     | String  | Encabezado de la lista.                                                    |
+| `descriptionList` | String  | Descripción de la lista.                                                   |
+| `lists`          | Array   | Array con los datos de cada lista.                                         |
+| `moreOptionUrl`  | String  | URL para la opción de "Más opciones".                                      |
+| `moreOptionTitle`| String  | Título para la opción de "Más opciones".                                  |
 
 
 
